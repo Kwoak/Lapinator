@@ -38,7 +38,6 @@ html, body {
 	align-items: center;
 	justify-content: space-around;
 	margin: 0px 5px 5px 15px;
-
 }
 
 .navbar {
@@ -58,7 +57,7 @@ html, body {
 	padding-bottom: 15px;
 }
 
-#a_active {
+#a-active {
 	color: #00a0f7;
 	text-decoration: none;
 }
@@ -78,8 +77,11 @@ html, body {
 	color: #00a0f7;
 	flex: 1;
 	margin: 0;
-	list-style-type: none;
 	justify-content: center;
+}
+
+.icon {
+	display: none;
 }
 
 .text-title {
@@ -121,16 +123,15 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   align-content: stretch;
-  border-radius: 29px;
+  border-radius: 35px;
   width: 110%;
 }
 
 
-.svg {
+.fa-sign-in-alt {
 	padding-left: 2%;
 	z-index: 2;
-	height: 8%;
-	width: 8%;
+	font-size: 24px;
 	color: grey;
 }
 
@@ -138,9 +139,9 @@ html, body {
 .input {
 	width: 110%;
 	z-index: 1;
-	border-radius: 29px;
+	border-radius: 35px;
 	border: none;
-	padding: 10px 20px 10px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 ::placeholder {
@@ -175,4 +176,90 @@ button {
 #mdp {
 	text-decoration: none;
 	color: grey;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+
+
+
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  
+  
+}
+
+
+
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 481px) and (max-width: 768px) {
+  
+  .right-panel {
+  	display: none;
+  }
+
+  
+}
+
+
+
+
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (max-width: 480px) {
+  
+  .right-panel {
+  	display: none;
+  }
+
+  .navbar.responsive {
+  	position: relative;
+  }
+
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navbar {
+  	display: none;
+  }
+
+  
+  .flex-container a.icon {
+    display: block;
+    color: grey;
+  }
+
 }

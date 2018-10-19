@@ -1,0 +1,180 @@
+html,
+body {
+    height: 100%;
+    overflow-y: hidden;
+    font-family: helvetica;
+    #conteneur {
+        display: flex;
+        height: 100%;
+        .left-panel {
+            flex: 2;
+            background-color: white;
+            z-index: 1;
+            .flex-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0px 5px 5px 15px;
+                .logo {
+                    width: 50px;
+                    height: 50px;
+                }
+                .navbar {
+                    display: flex;
+                    padding: 20px;
+                    flex: 4;
+                    margin: 10px;
+                    .menu-active {
+                        display: flex;
+                        color: #00a0f7;
+                        flex: 1;
+                        margin: 0;
+                        justify-content: center;
+                        border-bottom: 3px solid #00a0f7;
+                        padding-bottom: 15px;
+                        #a-active {
+                            color: #00a0f7;
+                            text-decoration: none;
+                        }
+                    }
+                    .menu-item {
+                        display: flex;
+                        text-decoration: none;
+                        color: #00a0f7;
+                        flex: 1;
+                        margin: 0;
+                        justify-content: center;
+                        #a {
+                            text-decoration: none;
+                        }
+                    }
+                    .icon {
+                        display: none;
+                    }
+                }
+            }
+            .text-title {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin: 25% 50% 10% 10%;
+                .titre {
+                    font-weight: bold;
+                    font-size: 42px;
+                    margin: 0% 0% 2% 0%;
+                }
+                .paragraphe {
+                    font-size: 13px;
+                }
+            }
+            .form {
+                margin-left: 10%;
+                width: 90%;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 20px;
+                box-shadow: 0px 0px 10px 5px #DADADA;
+                color: #A4A4A4;
+                font-size: 16px;
+                background-color: white;
+                .container-form {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    align-content: stretch;
+                    border-radius: 35px;
+                    width: 110%;
+                    .fa-sign-in-alt {
+                        padding-left: 2%;
+                        z-index: 2;
+                        font-size: 24px;
+                        color: grey;
+                    }
+                    .input {
+                        width: 110%;
+                        z-index: 1;
+                        border-radius: 35px;
+                        border: none;
+                        padding: 20px 20px 20px 20px;
+                        &::placeholder {
+                            color: grey;
+                        }
+                    }
+                    button {
+                        z-index: 2;
+                        border-radius: 29px;
+                        border: none;
+                        background-color: #2fefd2;
+                        padding: 15px 70px 15px 70px;
+                        cursor: pointer;
+                        white-space: nowrap;
+                        text-align: center;
+                        #a_button {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .mdp {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10% 0% 0% 0%;
+                font-style: italic;
+                #mdp {
+                    text-decoration: none;
+                    color: grey;
+                }
+            }
+        }
+        .right-panel {
+            flex: 3;
+            background-image: url("../img/lapinator.jpg");
+            background-size: cover;
+        }
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    //CSS
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 769px) and (max-width: 1280px) {}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .right-panel {
+        display: none;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 480px) {
+    .right-panel {
+        display: none;
+    }
+
+    .left-panel {
+        
+    }
+}

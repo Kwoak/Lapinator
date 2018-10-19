@@ -1,0 +1,250 @@
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+  font-family: helvetica;
+}
+
+html #conteneur, body #conteneur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+html #conteneur .left-panel, body #conteneur .left-panel {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  background-color: white;
+  z-index: 1;
+}
+
+html #conteneur .left-panel .flex-container, body #conteneur .left-panel .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0px 5px 5px 15px;
+}
+
+html #conteneur .left-panel .flex-container .logo, body #conteneur .left-panel .flex-container .logo {
+  width: 50px;
+  height: 50px;
+}
+
+html #conteneur .left-panel .flex-container .navbar, body #conteneur .left-panel .flex-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  margin: 10px;
+}
+
+html #conteneur .left-panel .flex-container .navbar .menu-active, body #conteneur .left-panel .flex-container .navbar .menu-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #00a0f7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 3px solid #00a0f7;
+  padding-bottom: 15px;
+}
+
+html #conteneur .left-panel .flex-container .navbar .menu-active #a-active, body #conteneur .left-panel .flex-container .navbar .menu-active #a-active {
+  color: #00a0f7;
+  text-decoration: none;
+}
+
+html #conteneur .left-panel .flex-container .navbar .menu-item, body #conteneur .left-panel .flex-container .navbar .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #00a0f7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html #conteneur .left-panel .flex-container .navbar .menu-item #a, body #conteneur .left-panel .flex-container .navbar .menu-item #a {
+  text-decoration: none;
+}
+
+html #conteneur .left-panel .flex-container .navbar .icon, body #conteneur .left-panel .flex-container .navbar .icon {
+  display: none;
+}
+
+html #conteneur .left-panel .text-title, body #conteneur .left-panel .text-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin: 25% 50% 10% 10%;
+}
+
+html #conteneur .left-panel .text-title .titre, body #conteneur .left-panel .text-title .titre {
+  font-weight: bold;
+  font-size: 42px;
+  margin: 0% 0% 2% 0%;
+}
+
+html #conteneur .left-panel .text-title .paragraphe, body #conteneur .left-panel .text-title .paragraphe {
+  font-size: 13px;
+}
+
+html #conteneur .left-panel .form, body #conteneur .left-panel .form {
+  margin-left: 10%;
+  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px 5px #DADADA;
+          box-shadow: 0px 0px 10px 5px #DADADA;
+  color: #A4A4A4;
+  font-size: 16px;
+  background-color: white;
+}
+
+html #conteneur .left-panel .form .container-form, body #conteneur .left-panel .form .container-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  border-radius: 35px;
+  width: 110%;
+}
+
+html #conteneur .left-panel .form .container-form .fa-sign-in-alt, body #conteneur .left-panel .form .container-form .fa-sign-in-alt {
+  padding-left: 2%;
+  z-index: 2;
+  font-size: 24px;
+  color: grey;
+}
+
+html #conteneur .left-panel .form .container-form .input, body #conteneur .left-panel .form .container-form .input {
+  width: 110%;
+  z-index: 1;
+  border-radius: 35px;
+  border: none;
+  padding: 20px 20px 20px 20px;
+}
+
+html #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder, body #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder {
+  color: grey;
+}
+
+html #conteneur .left-panel .form .container-form .input:-ms-input-placeholder, body #conteneur .left-panel .form .container-form .input:-ms-input-placeholder {
+  color: grey;
+}
+
+html #conteneur .left-panel .form .container-form .input::-ms-input-placeholder, body #conteneur .left-panel .form .container-form .input::-ms-input-placeholder {
+  color: grey;
+}
+
+html #conteneur .left-panel .form .container-form .input::placeholder, body #conteneur .left-panel .form .container-form .input::placeholder {
+  color: grey;
+}
+
+html #conteneur .left-panel .form .container-form button, body #conteneur .left-panel .form .container-form button {
+  z-index: 2;
+  border-radius: 29px;
+  border: none;
+  background-color: #2fefd2;
+  padding: 15px 70px 15px 70px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+}
+
+html #conteneur .left-panel .form .container-form button #a_button, body #conteneur .left-panel .form .container-form button #a_button {
+  text-decoration: none;
+  color: white;
+}
+
+html #conteneur .left-panel .mdp, body #conteneur .left-panel .mdp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 10% 0% 0% 0%;
+  font-style: italic;
+}
+
+html #conteneur .left-panel .mdp #mdp, body #conteneur .left-panel .mdp #mdp {
+  text-decoration: none;
+  color: grey;
+}
+
+html #conteneur .right-panel, body #conteneur .right-panel {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background-image: url("../img/lapinator.jpg");
+  background-size: cover;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 481px) and (max-width: 768px) {
+  .right-panel {
+    display: none;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (max-width: 480px) {
+  .right-panel {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
