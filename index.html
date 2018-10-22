@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
 	 crossorigin="anonymous">
+	 <script src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>Lapinator</title>
 </head>
@@ -15,26 +16,35 @@
 	<section class="left-panel">
 		<nav class="flex-container">
 			<a href=""><img class="logo" src="img/rabbit.png"></a>
-			<ul class="navbar" id="myTopnav">
+			<ul class="navbar">
 				<li class="menu-active"><a id="a-active" href="">Accueil</a></li>
 				<li class="menu-item"><a id="a" href="">L'équipe</a></li>
 				<li class="menu-item"><a id="a" href="">Prix</a></li>
 				<li class="menu-item"><a id="a" href="">Blog</a></li>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<i class="fa fa-bars"></i>
-					< </a> </ul> </nav> <div class="text-title">
-						<h1 class="titre">LAPINATOR</h1>
-						<p class="paragraphe">Lorem ipsum dolor sit amet doleum.</p>
-						</div>
-						<form class="form">
-							<div class="container-form">
-								<i class="fas fa-sign-in-alt"></i>
-								<input class="input" type="text" name="prénom" placeholder="Entrez votre code session">
-								<button><a id="a_button" href="">Let's go!</a>
-								</button>
-							</div>
-						</form>
-						<p class="mdp"><a id="mdp" href="">Mot de passe oublié ?</a></p>
+			</ul>
+
+			<ul class="mobile-navbar" >
+				<li class="menu-active"><a id="a-active" href="">Accueil</a></li>
+				<li class="menu-item"><a id="a" href="">L'équipe</a></li>
+				<li class="menu-item"><a id="a" href="">Prix</a></li>
+				<li class="menu-item"><a id="a" href="">Blog</a></li>
+			</ul>
+			<i class="fa fa-bars" id="myTopnav"></i>
+
+		</nav>
+		<div class="text-title">
+			<h1 class="titre">LAPINATOR</h1>
+			<p class="paragraphe">Lorem ipsum dolor sit amet doleum.</p>
+		</div>
+		<form class="form">
+			<div class="container-form">
+				<i class="fas fa-sign-in-alt"></i>
+				<input class="input" type="text" name="prénom" placeholder="Entrez votre code session">
+				<button><a id="a_button" href="">Let's go!</a>
+				</button>
+			</div>
+		</form>
+		<p class="mdp"><a id="mdp" href="">Mot de passe oublié ?</a></p>
 	</section>
 
 	<section class="right-panel">

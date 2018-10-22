@@ -1,17 +1,20 @@
-html, body {
+html,
+body {
   height: 100%;
   overflow-y: hidden;
   font-family: helvetica;
 }
 
-html #conteneur, body #conteneur {
+html #conteneur,
+body #conteneur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
-html #conteneur .left-panel, body #conteneur .left-panel {
+html #conteneur .left-panel,
+body #conteneur .left-panel {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -19,24 +22,35 @@ html #conteneur .left-panel, body #conteneur .left-panel {
   z-index: 1;
 }
 
-html #conteneur .left-panel .flex-container, body #conteneur .left-panel .flex-container {
+html #conteneur .left-panel .flex-container,
+body #conteneur .left-panel .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px 5px 5px 15px;
 }
 
-html #conteneur .left-panel .flex-container .logo, body #conteneur .left-panel .flex-container .logo {
+html #conteneur .left-panel .flex-container .logo,
+body #conteneur .left-panel .flex-container .logo {
   width: 50px;
   height: 50px;
 }
 
-html #conteneur .left-panel .flex-container .navbar, body #conteneur .left-panel .flex-container .navbar {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .flex-container .logo,
+  body #conteneur .left-panel .flex-container .logo {
+    margin: 21px 0px 0px 0px;
+  }
+}
+
+html #conteneur .left-panel .flex-container .navbar,
+body #conteneur .left-panel .flex-container .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +61,15 @@ html #conteneur .left-panel .flex-container .navbar, body #conteneur .left-panel
   margin: 10px;
 }
 
-html #conteneur .left-panel .flex-container .navbar .menu-active, body #conteneur .left-panel .flex-container .navbar .menu-active {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .flex-container .navbar,
+  body #conteneur .left-panel .flex-container .navbar {
+    display: none;
+  }
+}
+
+html #conteneur .left-panel .flex-container .navbar .menu-active,
+body #conteneur .left-panel .flex-container .navbar .menu-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,12 +85,14 @@ html #conteneur .left-panel .flex-container .navbar .menu-active, body #conteneu
   padding-bottom: 15px;
 }
 
-html #conteneur .left-panel .flex-container .navbar .menu-active #a-active, body #conteneur .left-panel .flex-container .navbar .menu-active #a-active {
+html #conteneur .left-panel .flex-container .navbar .menu-active #a-active,
+body #conteneur .left-panel .flex-container .navbar .menu-active #a-active {
   color: #00a0f7;
   text-decoration: none;
 }
 
-html #conteneur .left-panel .flex-container .navbar .menu-item, body #conteneur .left-panel .flex-container .navbar .menu-item {
+html #conteneur .left-panel .flex-container .navbar .menu-item,
+body #conteneur .left-panel .flex-container .navbar .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,15 +107,33 @@ html #conteneur .left-panel .flex-container .navbar .menu-item, body #conteneur 
           justify-content: center;
 }
 
-html #conteneur .left-panel .flex-container .navbar .menu-item #a, body #conteneur .left-panel .flex-container .navbar .menu-item #a {
+html #conteneur .left-panel .flex-container .navbar .menu-item #a,
+body #conteneur .left-panel .flex-container .navbar .menu-item #a {
   text-decoration: none;
 }
 
-html #conteneur .left-panel .flex-container .navbar .icon, body #conteneur .left-panel .flex-container .navbar .icon {
+html #conteneur .left-panel .flex-container .mobile-navbar,
+body #conteneur .left-panel .flex-container .mobile-navbar {
   display: none;
 }
 
-html #conteneur .left-panel .text-title, body #conteneur .left-panel .text-title {
+html #conteneur .left-panel .flex-container #myTopnav,
+body #conteneur .left-panel .flex-container #myTopnav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .flex-container #myTopnav,
+  body #conteneur .left-panel .flex-container #myTopnav {
+    display: block;
+    font-size: 30px;
+    margin: 10px;
+    color: #8392a8;
+  }
+}
+
+html #conteneur .left-panel .text-title,
+body #conteneur .left-panel .text-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,23 +145,35 @@ html #conteneur .left-panel .text-title, body #conteneur .left-panel .text-title
   margin: 25% 50% 10% 10%;
 }
 
-html #conteneur .left-panel .text-title .titre, body #conteneur .left-panel .text-title .titre {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .text-title,
+  body #conteneur .left-panel .text-title {
+    text-align: center;
+    width: 100%;
+    margin: 25% 0% 10% 0%;
+  }
+}
+
+html #conteneur .left-panel .text-title .titre,
+body #conteneur .left-panel .text-title .titre {
   font-weight: bold;
   font-size: 42px;
   margin: 0% 0% 2% 0%;
 }
 
-html #conteneur .left-panel .text-title .paragraphe, body #conteneur .left-panel .text-title .paragraphe {
+html #conteneur .left-panel .text-title .paragraphe,
+body #conteneur .left-panel .text-title .paragraphe {
   font-size: 13px;
 }
 
-html #conteneur .left-panel .form, body #conteneur .left-panel .form {
+html #conteneur .left-panel .form,
+body #conteneur .left-panel .form {
   margin-left: 10%;
   width: 90%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   -webkit-box-shadow: 0px 0px 10px 5px #DADADA;
           box-shadow: 0px 0px 10px 5px #DADADA;
   color: #A4A4A4;
@@ -127,58 +181,83 @@ html #conteneur .left-panel .form, body #conteneur .left-panel .form {
   background-color: white;
 }
 
-html #conteneur .left-panel .form .container-form, body #conteneur .left-panel .form .container-form {
+html #conteneur .left-panel .form .container-form,
+body #conteneur .left-panel .form .container-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
   border-radius: 35px;
   width: 110%;
 }
 
-html #conteneur .left-panel .form .container-form .fa-sign-in-alt, body #conteneur .left-panel .form .container-form .fa-sign-in-alt {
-  padding-left: 2%;
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .form .container-form,
+  body #conteneur .left-panel .form .container-form {
+    height: 57px;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+html #conteneur .left-panel .form .container-form .fa-sign-in-alt,
+body #conteneur .left-panel .form .container-form .fa-sign-in-alt {
+  padding-left: 3%;
   z-index: 2;
   font-size: 24px;
-  color: grey;
+  color: #c7ced8;
 }
 
-html #conteneur .left-panel .form .container-form .input, body #conteneur .left-panel .form .container-form .input {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .form .container-form .fa-sign-in-alt,
+  body #conteneur .left-panel .form .container-form .fa-sign-in-alt {
+    width: 7%;
+  }
+}
+
+html #conteneur .left-panel .form .container-form .input,
+body #conteneur .left-panel .form .container-form .input {
   width: 110%;
   z-index: 1;
-  border-radius: 35px;
   border: none;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 30px;
 }
 
-html #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder, body #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder {
-  color: grey;
+html #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder,
+body #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder {
+  color: #c7ced8;
 }
 
-html #conteneur .left-panel .form .container-form .input:-ms-input-placeholder, body #conteneur .left-panel .form .container-form .input:-ms-input-placeholder {
-  color: grey;
+html #conteneur .left-panel .form .container-form .input:-ms-input-placeholder,
+body #conteneur .left-panel .form .container-form .input:-ms-input-placeholder {
+  color: #c7ced8;
 }
 
-html #conteneur .left-panel .form .container-form .input::-ms-input-placeholder, body #conteneur .left-panel .form .container-form .input::-ms-input-placeholder {
-  color: grey;
+html #conteneur .left-panel .form .container-form .input::-ms-input-placeholder,
+body #conteneur .left-panel .form .container-form .input::-ms-input-placeholder {
+  color: #c7ced8;
 }
 
-html #conteneur .left-panel .form .container-form .input::placeholder, body #conteneur .left-panel .form .container-form .input::placeholder {
-  color: grey;
+html #conteneur .left-panel .form .container-form .input::placeholder,
+body #conteneur .left-panel .form .container-form .input::placeholder {
+  color: #c7ced8;
 }
 
-html #conteneur .left-panel .form .container-form button, body #conteneur .left-panel .form .container-form button {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .form .container-form .input,
+  body #conteneur .left-panel .form .container-form .input {
+    width: 70%;
+    border-radius: 35px;
+  }
+}
+
+html #conteneur .left-panel .form .container-form button,
+body #conteneur .left-panel .form .container-form button {
   z-index: 2;
   border-radius: 29px;
   border: none;
@@ -189,12 +268,21 @@ html #conteneur .left-panel .form .container-form button, body #conteneur .left-
   text-align: center;
 }
 
-html #conteneur .left-panel .form .container-form button #a_button, body #conteneur .left-panel .form .container-form button #a_button {
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .form .container-form button,
+  body #conteneur .left-panel .form .container-form button {
+    margin: 30px;
+  }
+}
+
+html #conteneur .left-panel .form .container-form button #a_button,
+body #conteneur .left-panel .form .container-form button #a_button {
   text-decoration: none;
   color: white;
 }
 
-html #conteneur .left-panel .mdp, body #conteneur .left-panel .mdp {
+html #conteneur .left-panel .mdp,
+body #conteneur .left-panel .mdp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,12 +295,14 @@ html #conteneur .left-panel .mdp, body #conteneur .left-panel .mdp {
   font-style: italic;
 }
 
-html #conteneur .left-panel .mdp #mdp, body #conteneur .left-panel .mdp #mdp {
+html #conteneur .left-panel .mdp #mdp,
+body #conteneur .left-panel .mdp #mdp {
   text-decoration: none;
-  color: grey;
+  color: #c7ced8;
 }
 
-html #conteneur .right-panel, body #conteneur .right-panel {
+html #conteneur .right-panel,
+body #conteneur .right-panel {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -232,7 +322,12 @@ html #conteneur .right-panel, body #conteneur .right-panel {
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
-@media (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .left-panel {
+    background-image: url("../img/Group.svg");
+    background-size: cover;
+    background-position: center;
+  }
   .right-panel {
     display: none;
   }
@@ -242,9 +337,3 @@ html #conteneur .right-panel, body #conteneur .right-panel {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-@media (max-width: 480px) {
-  .right-panel {
-    display: none;
-  }
-}
-/*# sourceMappingURL=style.css.map */

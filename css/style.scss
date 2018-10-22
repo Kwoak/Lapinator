@@ -13,17 +13,23 @@ body {
             .flex-container {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin: 0px 5px 5px 15px;
                 .logo {
                     width: 50px;
                     height: 50px;
+                    @media screen and (max-width: 768px) {
+                        margin: 21px 0px 0px 0px;
+                    }
                 }
                 .navbar {
                     display: flex;
                     padding: 20px;
                     flex: 4;
                     margin: 10px;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                     .menu-active {
                         display: flex;
                         color: #00a0f7;
@@ -48,8 +54,17 @@ body {
                             text-decoration: none;
                         }
                     }
-                    .icon {
-                        display: none;
+                }
+                .mobile-navbar {
+                    display: none;
+                }
+                #myTopnav {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        font-size: 30px;
+                        margin: 10px;
+                        color: #8392a8;
                     }
                 }
             }
@@ -58,6 +73,11 @@ body {
                 flex-direction: column;
                 text-align: left;
                 margin: 25% 50% 10% 10%;
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                    width: 100%;
+                    margin: 25% 0% 10% 0%;
+                }
                 .titre {
                     font-weight: bold;
                     font-size: 42px;
@@ -72,33 +92,43 @@ body {
                 width: 90%;
                 box-sizing: border-box;
                 border: none;
-                border-radius: 20px;
+                border-radius: 30px;
                 box-shadow: 0px 0px 10px 5px #DADADA;
                 color: #A4A4A4;
                 font-size: 16px;
                 background-color: white;
+                
                 .container-form {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
+                    justify-content: space-around;
                     align-items: center;
-                    align-content: stretch;
                     border-radius: 35px;
                     width: 110%;
+                    @media screen and (max-width: 768px) {
+                        height: 57px;
+                        width: 100%;
+                        flex-wrap: wrap;
+                    }
                     .fa-sign-in-alt {
-                        padding-left: 2%;
+                        padding-left: 3%;
                         z-index: 2;
                         font-size: 24px;
-                        color: grey;
+                        color: #c7ced8;
+                        @media screen and (max-width: 768px) {
+                            width: 7%;
+                        }
                     }
                     .input {
                         width: 110%;
                         z-index: 1;
-                        border-radius: 35px;
                         border: none;
-                        padding: 20px 20px 20px 20px;
+                        padding: 20px 20px 20px 30px;
                         &::placeholder {
-                            color: grey;
+                            color: #c7ced8;
+                        }
+                        @media screen and (max-width: 768px) {
+                            width: 70%;
+                            border-radius: 35px;
                         }
                     }
                     button {
@@ -110,6 +140,11 @@ body {
                         cursor: pointer;
                         white-space: nowrap;
                         text-align: center;
+
+                        @media screen and (max-width: 768px) {
+                            margin: 30px;
+                        }
+                        
                         #a_button {
                             text-decoration: none;
                             color: white;
@@ -125,7 +160,7 @@ body {
                 font-style: italic;
                 #mdp {
                     text-decoration: none;
-                    color: grey;
+                    color: #c7ced8;
                 }
             }
         }
@@ -151,14 +186,19 @@ body {
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 769px) and (max-width: 1280px) {}
+@media (max-width: 1280px) {}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .left-panel{
+        background-image: url("../img/Group.svg");
+        background-size: cover;
+        background-position: center;
+    }
     .right-panel {
         display: none;
     }
@@ -169,12 +209,4 @@ body {
   ##Screen = B/w 320px to 479px
 */
 
-@media (max-width: 480px) {
-    .right-panel {
-        display: none;
-    }
-
-    .left-panel {
-        
-    }
-}
+@media (max-width: 480px) {}
