@@ -10,6 +10,11 @@ body {
             flex: 2;
             background-color: white;
             z-index: 1;
+            @media (max-width: 768px) {
+                background-image: url("../img/Group.svg");
+                background-size: cover;
+                background-position: center;
+            }
             .flex-container {
                 display: flex;
                 align-items: center;
@@ -32,19 +37,20 @@ body {
                     }
                     .menu-active {
                         display: flex;
-                        color: #00a0f7;
+                        color: #4488FF;
                         flex: 1;
                         margin: 0;
                         justify-content: center;
-                        border-bottom: 3px solid #00a0f7;
+                        border-bottom: 3px solid #4488FF;
                         padding-bottom: 15px;
                         #a-active {
-                            color: #00a0f7;
+                            color: #4488FF;
                             text-decoration: none;
                         }
                     }
                     .menu-item {
                         display: flex;
+                        color: #687695;
                         text-decoration: none;
                         flex: 1;
                         margin: 0;
@@ -52,7 +58,7 @@ body {
                         #a {
                             text-decoration: none;
                             &:hover {
-                                color: #00a0f7;
+                                color: #4488FF;
                             }
                         }
                     }
@@ -66,35 +72,34 @@ body {
                     justify-content: space-between;
                     margin-top: 10px;
                     position: absolute;
-                    top:0px;
+                    top: 0px;
                     right: 35%;
                     .menu-active {
                         display: flex;
-                        color: #00a0f7;
+                        color: #4488FF;
                         flex: 1;
                         margin: 0;
                         justify-content: center;
-                        border-bottom: 3px solid #00a0f7;
+                        border-bottom: 3px solid #4488FF;
                         padding-bottom: 10px;
                         #a-active {
-                            color: #00a0f7;
+                            color: #4488FF;
                             text-decoration: none;
                         }
                     }
                     .menu-item {
                         display: flex;
                         text-decoration: none;
-                        color: #00a0f7;
+                        color: #687695;
                         flex: 1;
                         margin: 0;
                         justify-content: center;
                         padding-bottom: 10px;
                         padding-top: 5px;
-                    
                         #a {
                             text-decoration: none;
                             &:hover {
-                                color: #00a0f7;
+                                color: #4488FF;
                             }
                         }
                     }
@@ -105,7 +110,7 @@ body {
                         display: block;
                         font-size: 30px;
                         margin: 20px 15px 0px 0px;
-                        color: #8392a8;
+                        color: #616F90;
                         z-index: 5;
                         cursor: pointer;
                     }
@@ -119,15 +124,22 @@ body {
                 @media screen and (max-width: 768px) {
                     text-align: center;
                     width: 100%;
-                    margin: 25% 0% 10% 0%;
+                    margin: 25% 0% 20% 0%;
+                }
+                @media screen and (max-width: 500px) {
+                    text-align: center;
+                    width: 100%;
+                    margin: 50% 0% 20% 0%;
                 }
                 .titre {
                     font-weight: bold;
                     font-size: 42px;
                     margin: 0% 0% 2% 0%;
+                    color: #131D35;
                 }
                 .paragraphe {
                     font-size: 13px;
+                    color: #7D88A4;
                 }
             }
             .form {
@@ -136,7 +148,7 @@ body {
                 box-sizing: border-box;
                 border: none;
                 border-radius: 30px;
-                box-shadow: 0px 0px 60px 5px #DADADA;
+                box-shadow: 0px 0px 100px 5px #DADADA;
                 color: #A4A4A4;
                 font-size: 16px;
                 background-color: white;
@@ -163,6 +175,7 @@ body {
                         color: #c7ced8;
                         @media screen and (max-width: 768px) {
                             width: 7%;
+                            padding-left: 5%;
                         }
                     }
                     .input {
@@ -182,7 +195,7 @@ body {
                         z-index: 2;
                         border-radius: 29px;
                         border: none;
-                        background-color: #2fefd2;
+                        background-color: #50E3C2;
                         padding: 15px 70px 15px 70px;
                         cursor: pointer;
                         white-space: nowrap;
@@ -190,6 +203,7 @@ body {
                         font-weight: bold;
                         @media screen and (max-width: 768px) {
                             margin: 40px;
+                            padding: 15px 50px 15px 50px;
                         }
                         #a_button {
                             text-decoration: none;
@@ -217,45 +231,9 @@ body {
             flex: 3;
             background-image: url("../img/lapinator.jpg");
             background-size: cover;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-    //CSS
-}
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (max-width: 1280px) {}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (max-width: 768px) {
-    .left-panel {
-        background-image: url("../img/Group.svg");
-        background-size: cover;
-        background-position: center;
-    }
-    .right-panel {
-        display: none;
-    }
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (max-width: 480px) {}
