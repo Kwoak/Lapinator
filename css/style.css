@@ -97,7 +97,6 @@ body #conteneur .left-panel .flex-container .navbar .menu-item {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  color: #00a0f7;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -112,9 +111,76 @@ body #conteneur .left-panel .flex-container .navbar .menu-item #a {
   text-decoration: none;
 }
 
+html #conteneur .left-panel .flex-container .navbar .menu-item #a:hover,
+body #conteneur .left-panel .flex-container .navbar .menu-item #a:hover {
+  color: #00a0f7;
+}
+
 html #conteneur .left-panel .flex-container .mobile-navbar,
 body #conteneur .left-panel .flex-container .mobile-navbar {
   display: none;
+  width: 30%;
+  height: 20%;
+  background-color: #CCFFF4;
+  z-index: 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  position: absolute;
+  top: 0px;
+  right: 35%;
+}
+
+html #conteneur .left-panel .flex-container .mobile-navbar .menu-active,
+body #conteneur .left-panel .flex-container .mobile-navbar .menu-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #00a0f7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 3px solid #00a0f7;
+  padding-bottom: 10px;
+}
+
+html #conteneur .left-panel .flex-container .mobile-navbar .menu-active #a-active,
+body #conteneur .left-panel .flex-container .mobile-navbar .menu-active #a-active {
+  color: #00a0f7;
+  text-decoration: none;
+}
+
+html #conteneur .left-panel .flex-container .mobile-navbar .menu-item,
+body #conteneur .left-panel .flex-container .mobile-navbar .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #00a0f7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+html #conteneur .left-panel .flex-container .mobile-navbar .menu-item #a,
+body #conteneur .left-panel .flex-container .mobile-navbar .menu-item #a {
+  text-decoration: none;
+}
+
+html #conteneur .left-panel .flex-container .mobile-navbar .menu-item #a:hover,
+body #conteneur .left-panel .flex-container .mobile-navbar .menu-item #a:hover {
+  color: #00a0f7;
 }
 
 html #conteneur .left-panel .flex-container #myTopnav,
@@ -127,8 +193,10 @@ body #conteneur .left-panel .flex-container #myTopnav {
   body #conteneur .left-panel .flex-container #myTopnav {
     display: block;
     font-size: 30px;
-    margin: 10px;
+    margin: 20px 15px 0px 0px;
     color: #8392a8;
+    z-index: 5;
+    cursor: pointer;
   }
 }
 
@@ -174,11 +242,20 @@ body #conteneur .left-panel .form {
           box-sizing: border-box;
   border: none;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 0px 10px 5px #DADADA;
-          box-shadow: 0px 0px 10px 5px #DADADA;
+  -webkit-box-shadow: 0px 0px 60px 5px #DADADA;
+          box-shadow: 0px 0px 60px 5px #DADADA;
   color: #A4A4A4;
   font-size: 16px;
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .form,
+  body #conteneur .left-panel .form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
 }
 
 html #conteneur .left-panel .form .container-form,
@@ -266,12 +343,13 @@ body #conteneur .left-panel .form .container-form button {
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
   html #conteneur .left-panel .form .container-form button,
   body #conteneur .left-panel .form .container-form button {
-    margin: 30px;
+    margin: 40px;
   }
 }
 
@@ -293,6 +371,13 @@ body #conteneur .left-panel .mdp {
   text-align: center;
   margin: 10% 0% 0% 0%;
   font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  html #conteneur .left-panel .mdp,
+  body #conteneur .left-panel .mdp {
+    margin-top: 150px;
+  }
 }
 
 html #conteneur .left-panel .mdp #mdp,
@@ -322,7 +407,7 @@ body #conteneur .right-panel {
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .left-panel {
     background-image: url("../img/Group.svg");
     background-size: cover;
