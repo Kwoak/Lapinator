@@ -241,6 +241,15 @@ body #conteneur .left-panel .text-title {
   }
 }
 
+@media screen and (max-width: 320px) {
+  html #conteneur .left-panel .text-title,
+  body #conteneur .left-panel .text-title {
+    text-align: center;
+    width: 100%;
+    margin: 25% 0% 20% 0%;
+  }
+}
+
 html #conteneur .left-panel .text-title .titre,
 body #conteneur .left-panel .text-title .titre {
   font-weight: bold;
@@ -257,7 +266,7 @@ body #conteneur .left-panel .text-title .paragraphe {
 
 html #conteneur .left-panel .form,
 body #conteneur .left-panel .form {
-  margin-left: 10%;
+  margin-left: 8%;
   width: 90%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -276,6 +285,15 @@ body #conteneur .left-panel .form {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html #conteneur .left-panel .form,
+  body #conteneur .left-panel .form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 }
 
@@ -327,6 +345,11 @@ body #conteneur .left-panel .form .container-form .input {
   padding: 20px 20px 20px 30px;
 }
 
+html #conteneur .left-panel .form .container-form .input:focus,
+body #conteneur .left-panel .form .container-form .input:focus {
+  outline: none;
+}
+
 html #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder,
 body #conteneur .left-panel .form .container-form .input::-webkit-input-placeholder {
   color: #c7ced8;
@@ -361,7 +384,7 @@ body #conteneur .left-panel .form .container-form button {
   border-radius: 29px;
   border: none;
   background-color: #50E3C2;
-  padding: 15px 70px 15px 70px;
+  padding: 20px 70px 15px 70px;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
@@ -416,6 +439,7 @@ body #conteneur .right-panel {
           flex: 3;
   background-image: url("../img/lapinator.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 @media screen and (max-width: 768px) {

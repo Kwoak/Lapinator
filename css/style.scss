@@ -131,6 +131,11 @@ body {
                     width: 100%;
                     margin: 50% 0% 20% 0%;
                 }
+                @media screen and (max-width: 320px) {
+                    text-align: center;
+                    width: 100%;
+                    margin: 25% 0% 20% 0%;
+                }
                 .titre {
                     font-weight: bold;
                     font-size: 42px;
@@ -143,7 +148,7 @@ body {
                 }
             }
             .form {
-                margin-left: 10%;
+                margin-left: 8%;
                 width: 90%;
                 box-sizing: border-box;
                 border: none;
@@ -156,6 +161,11 @@ body {
                     margin-left: auto;
                     margin-right: auto;
                     width: 80%;
+                }
+                @media screen and (max-width: 320px) {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 90%;
                 }
                 .container-form {
                     display: flex;
@@ -183,6 +193,9 @@ body {
                         z-index: 1;
                         border: none;
                         padding: 20px 20px 20px 30px;
+                        &:focus{
+                            outline: none;
+                        }
                         &::placeholder {
                             color: #c7ced8;
                         }
@@ -196,7 +209,7 @@ body {
                         border-radius: 29px;
                         border: none;
                         background-color: #50E3C2;
-                        padding: 15px 70px 15px 70px;
+                        padding: 20px 70px 15px 70px;
                         cursor: pointer;
                         white-space: nowrap;
                         text-align: center;
@@ -231,6 +244,7 @@ body {
             flex: 3;
             background-image: url("../img/lapinator.jpg");
             background-size: cover;
+            background-position: center;
             @media screen and (max-width: 768px) {
                 display: none;
             }
